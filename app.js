@@ -54,6 +54,7 @@ function createBook(book) {
   let pages = document.createElement("p");
   let isReadBtn = document.createElement("button");
   let deleteBtn = document.createElement("button");
+  let buttonDiv = document.createElement('div');
 
   bookDiv.classList.add("book");
 
@@ -64,6 +65,7 @@ function createBook(book) {
   }
 
   deleteBtn.classList.add("delete");
+  buttonDiv.classList.add('buttons');
 
   title.textContent = book.title;
   author.textContent = book.author;
@@ -84,8 +86,11 @@ function createBook(book) {
   bookDiv.appendChild(title);
   bookDiv.appendChild(author);
   bookDiv.appendChild(pages);
-  bookDiv.appendChild(isReadBtn);
-  bookDiv.appendChild(deleteBtn);
+
+  buttonDiv.appendChild(isReadBtn);
+  buttonDiv.appendChild(deleteBtn);
+  
+  bookDiv.appendChild(buttonDiv);
 
   libraryContainer.appendChild(bookDiv);
 }
@@ -97,3 +102,7 @@ function isNotFull(book) {
         }
     }
 }
+
+Library.push(new Book('The Lord of the Rings', 'J. R. R. Tolkien', '1,191', true));
+Library.push(new Book('IT', 'Stephen King', '1,138', false));
+render();

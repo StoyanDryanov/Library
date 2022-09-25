@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+:root {
+    --header-bg: #FFC7C7;
+    --side-bg: #8785A2;
+    --library-bg: #F6F6F6;
+    --book-bg: #FFE2E2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    background-color: var(--header-bg);
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: .2ch;
+}
+
+main {
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    width: 100%;
+    height: 85vh;
+}
+
+.wrapper {
+    background-color: var(--side-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+form h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+form .fill {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 500;
+}
+
+[type="text"],
+[type="number"] {
+    width: 100%;
+    height: 2.5rem;
+    padding: 4px 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.is-read {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#is-read {
+    height: 20px;
+    width: 20px;
+}
+
+[type="submit"] {
+    height: 50px;
+    width: auto;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgba(101, 199, 255, 1);
+    color: #fefefe;
+}
+
+[type="submit"]:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+[type="submit"]:active {
+    background-color: rgba(101, 199, 255, .8);
+}
+
+.library {
+    padding: 2rem;
+    background-color: var(--library-bg);
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 350px);
+    place-content: center;
+    gap: 50px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--book-bg);
+    border: 4px solid var(--side-bg);
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.book p:first-child,
+.book p:first-child::before,
+.book p:first-child::after {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.book p:first-child::before,
+.book p:first-child::after {
+    content: "\"";
+}
+
+.book p:nth-child(2) {
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.book p:last-of-type::after {
+    content: " pg.";
+}
+
+.buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.buttons button {
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.delete {
+    background-color: rgba(255, 110, 110, 1);
+    border: 2px solid transparent;
+}
+
+.delete:hover {
+    border: 2px solid #000;
+}
+
+.delete:active {
+    background-color: rgba(255, 110, 110, .7);
+}
+
+.read {
+    background-color: rgba(110, 255, 110,1);
+    border: 2px solid transparent;
+}
+
+.read:hover {
+    border: 2px solid #000;
+}
+
+.read:active {
+    background-color: rgba(110, 255, 110, .7);
+}
+
+.not-read {
+    background-color: rgb(255, 110, 255);
+    border: 2px solid transparent;
+}
+
+.not-read:hover {
+    border: 2px solid #000;
+}
+
+.not-read:active {
+    background-color: rgba(255, 110, 255, .7);
+}

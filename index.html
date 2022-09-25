@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Library</title>
   </head>
   <body>
@@ -11,54 +12,59 @@
       <h1>Library</h1>
     </header>
     <main>
-      <div class="library">
-        
+      <div class="wrapper">
+        <form id="form">
+          <h2>Add new book</h2>
+          <div class="fill">
+            <label for="Author">Author</label>
+            <input
+              type="text"
+              name="Author"
+              id="Author"
+              placeholder="Author"
+              aria-label="Author"
+              autocomplete="off"
+              minlength="2"
+              required
+            />
+          </div>
+          <div class="fill">
+            <label for="Title">Title</label>
+            <input
+              type="text"
+              name="Title"
+              id="Title"
+              placeholder="Title"
+              aria-label="Title"
+              autocomplete="off"
+              minlength="2"
+              required
+            />
+          </div>
+          <div class="fill">
+            <label for="Pages">Pages</label>
+            <input
+              type="number"
+              name="Pages"
+              id="Pages"
+              placeholder="Pages"
+              aria-label="Pages"
+              autocomplete="off"
+              min="1"
+              max="10000"
+              required
+            />
+          </div>
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input type="checkbox" name="is-read" id="is-read" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
+      <div class="library"></div>
     </main>
-    <div class="wrapper">
-      <form id="form">
-        <h3>Add new book</h3>
-        <input
-          type="text"
-          name="Author"
-          id="Author"
-          placeholder="Author"
-          aria-label="Author"
-          autocomplete="off"
-          minlength="2"
-          required
-        />
-        <br>
-        <input
-          type="text"
-          name="Title"
-          id="Title"
-          placeholder="Title"
-          aria-label="Title"
-          autocomplete="off"
-          minlength="2"
-          required
-        />
-        <br>
-        <input
-          type="number"
-          name="Pages"
-          id="Pages"
-          placeholder="Pages"
-          aria-label="Pages"
-          autocomplete="off"
-          min="1"
-          max="10000"
-          required
-        />
-        <br>
-        <div class="is-read">
-          <label for="is-read">Have you read it?</label>
-          <input type="checkbox" name="is-read" id="is-read"/>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+
     <script src="app.js" async defer></script>
   </body>
 </html>
